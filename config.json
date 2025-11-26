@@ -1,27 +1,29 @@
 {
   "inbounds": [
     {
-      "port": 8080,
+      "port": 443,
       "protocol": "trojan",
       "settings": {
         "clients": [
           {
             "password": "vip_info",
-            "level": 0
+            "flow": ""
           }
-        ]
+        ],
+        "fallbacks": []
       },
       "streamSettings": {
         "network": "ws",
+        "security": "tls",
         "wsSettings": {
-          "path": "/vip_info"
+          "path": "/faycal"
         }
       }
     }
   ],
   "outbounds": [
     {
-      "protocol": "direct",
+      "protocol": "freedom",
       "settings": {}
     }
   ]
